@@ -1,272 +1,61 @@
 <div align="center">
- <h2>TailPOS</h2>
- <p align="center">
-  <p>TailPOS  an Offline First Open Source POS for ERPNext</p>
-  <a href='https://play.google.com/store/apps/details?id=com.tailpos&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='25%' /></a>
- </p>
+![Project Logo](https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png
+<h1 align="center">Empress Offline POS: Empower Your Business with Uninterrupted Operations</h1>
+<p align="center">
+An offline-first open source POS that syncs seamlessly with your Empress instance.
+<br />
+<a href="https://grow.empress.eco/">Explore the Docs</a>
+·
+<a href="https://github.com/empress-eco/offline_pos/issues">Report Bug</a>
+·
+<a href="https://github.com/empress-eco/offline_pos/issues/new">Request Feature</a>
+</p>
 </div>
 
-### Showcase
+## About Empress Offline POS
 
-![Showcase](showcase.gif)
+### 📖 Overview
+Empress Offline POS is an open-source, offline-first Point of Sale (POS) system designed to support businesses requiring a reliable, continuous, and mobile sales solution. With its two-way syncing feature to an Empress instance, Empress Offline POS ensures that your business remains functional even during internet downtime.
 
-### Features
+### 🌟 Key Features
+- **Two-way Sync to Empress:** Sync your POS operations seamlessly with your Empress instance for robust back-office functionalities.
+- **Offline-first Approach:** Keep your business running unimpeded during internet downtime.
+- **Mobile POS:** Turn your tablet into a POS with a built-in rear camera as a barcode scanner, or connect any Bluetooth barcode scanner.
+- **Print Receipts:** Print sales receipts for your customers using any ESC/POS receipt printer.
+- **Multiple Payment Modes:** Accept payments in cash, credit card, or mobile payments.
+- **Discounts Program:** Apply discounts on specific items or on the whole invoice.
+- **Inventory Management:** Manage your stock levels and update item information with ease.
+- **Sales Reports:** Generate X and Z readings and attendant shift sales totals.
 
-<b> o Two-way Sync to ERPNext </b>
-  Two-way syncing to an ERPNext instance for a full suite of back-office functionalities.
+### 🛠 Built With
+- React Native
+- Node.js
 
-<b> o Offline-first Approach </b>
-  Continue to make sales and keep running the business even no  internet or unstable.
+## Getting Started
 
-<b> o Mobile POS </b>
-  Uses the tablet for a lightweight setup. Built-in rear camera of the tablet can be used as a barcode scanner. Any bluetooth barcode scanner is compatible with `tailpos`
+### Prerequisites
+You will need NodeJS, npm, Java, Android and yarn installed on your system. 
 
-<b> o Print receipts </b>
-  Print sales receipts for customers using any ESC/POS receipt printer.
-
-<b> o Multiple payment modes </b>
-  Can process credit card,mobile payments and cash.
-
-<b> o Discounts Program </b>
-  Can apply discount to an invoice or on specific items.
-
-<b> o Inventory Management </b>
-  Keep track of stock levels easily. Easy-to-use menu for item maintenance such as creating and updating item information.
-
-<b> o Sales Reports </b>
-  Can generate X and Z readings and attendant shift sales totals.
-
-### License
-This project is released under the GPLv3 license, for more details, take a look at the LICENSE file in the source.
-
----
-
-### Quick Start
-A quick demo of syncing the `tailpos` to a Frappe/Erpnext server
-
-https://docs.tailpos.com/tailpos/syncing-to-frappe-erpnext
-
-##### Login to demo server
+### Installation and Usage
+Clone the project repository using the following command in your terminal:
+```bash
+git clone https://github.com/empress-eco/offline_pos.git
 ```
-server: https://demo.tailerp.com
-username: demo@example.com
-password: @Bailabs
-```
+For a detailed step-by-step guide on setting up and using Empress Offline POS, please refer to our [documentation](https://grow.empress.eco/).
 
-##### **Making a new item.** <br/>
-* Go To `Item` List.
-* Make a new `Item`.
-* Select your new `Item `to see its properties.
+## Contributing
+Empress Offline POS welcomes contributors! If you're interested in enhancing Empress Offline POS, follow these steps:
 
-![alt text](https://github.com/bailabs/tailpos/blob/master/pics/item%20created.png)
+- Fork the Project
+- Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+- Push to the Branch (`git push origin feature/AmazingFeature`)
+- Open a Pull Request
 
-* Select `Item Price` under `Pricing`.
-Make sure the `In TailPOS` checkbox is checked.
+## License
 
-![alt text](https://github.com/bailabs/tailpos/blob/master/pics/checkbox.png)
+This project is under the MIT License. Your contributions are also licensed under the MIT License.
 
-* Don't forget to save your Item.
+## Acknowledgements
 
-##### **Setup TailPOS Sync Settings**
-* Go to `Settings` > Sync
-* Fill the following
-```
-ERPNext Server: demo.tailerp.com
-Username: demo@example.com
-Password: @Bailabs
-Device ID: <>
-```
-#### **Setting up device ID**
-* Go to `Device` list.
-* Create a new `Device`
-* Input the `Device Name` and `POS Profile`
-* Fill out information need in the `POS profile`
-```
-Name: <>
-Series: ACC-SINV-.YYYY.-
-
-Accounting
-Write Off Accounting: Write Off – D
-Write Off Cost Center: Main – D
-```
-
-![alt text](https://github.com/bailabs/tailpos/blob/master/pics/pos%20profile.png)
-
-![alt text](https://github.com/bailabs/tailpos/blob/master/pics/write%20off.png)
-
-* Select your new `Device`.
-* `Device ID` is displayed at the top-right corner near the `Save` button. <br/>
-
-![alt text](https://github.com/bailabs/tailpos/blob/master/pics/device%20name.png)
-
-##### **Syncing**
-* Once your done, save your `Sync Settings`. 
-* Press `Force Sync`.
-* Once `Force Sync` is successful, go to your `Sales` tab and fill up a sample transaction.
-* Confirm the transaction by looking at your `Receipts` tab.
-* Now go back to your `Settings` > `Sync` and `Force Sync` the receipt data to the server.
-* Verify by going to `Receipts` List in ERPNext and check the receipts if they are generated.
-
-### How To Compile TailPOS in your local machine
-
-If you are interested contributing the `tailpos`, the following guide will give you instructions in compiling the `tailpos`.
-
-
-First, you'll need `nodejs` and `npm`:
-
-```terminal
-sudo apt install curl
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-nodejs -v
-v8.4.0
-```
-
-Install development tools to build native addons:
-```terminal
-sudo apt-get install gcc g++ make
-```
-Install the `yarn` package manager, run:
-```terminal
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-```
-
-Then you can install `react-native-cli` using `npm`
-
-```terminal
-sudo npm install -g react-native-cli
-```
-
-Now you need to install Java and Android
-
-```terminal
-sudo apt-get install default-jre
-sudo apt-get install default-jdk
-
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
-```
-
-* Install Android
-* Install Android SDK requirements
-
-```terminal
-cd ~
-mkdir android-sdk
-cd android-sdk
-wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
-sudo apt-get install unzip
-unzip sdk-tools-linux-3859397.zip
-```
-
-We add the path of our Android SDK tools to `.bashrc` so that we have access to the Android tools.
-```
-cd ~
-nano .bashrc
-
-# Add these lines to the top of the file
-export ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# CTRL+O (uppcase o) to save
-# CTRL+X to exit
-
-source ~/.bashrc
-```
-
-```terminal
-android update sdk --no-ui
-# Answer 'y' to all prompts
-
-sdkmanager "platforms;android-23" "build-tools;23.0.1" "add-ons;addon-google_apis-google-23"
-```
-
-Installing TailPOS
-```terminal
-cd ~
-mkdir Projects
-cd Projects
-git clone https://github.com/bailabs/tailpos.git
-cd tailpos
-yarn
-```
-
-Updating `react-native-camera` modules
-  * remove `buildscript` section
-
-```terminal
-  buildscript {
-  repositories {
-    jcenter()
-    maven {
-      url 'https://maven.google.com'
-    }
-  }
-
-  dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.0'
-  }
-}
-```
-
-  * `compileOnly` to `provided`
-  * `implementation` to `compile`
-
-```terminal
-cd ~
-nano Projects/tailpos/node_modules/react-native-camera/android/build.gradle
-```
-
-Updating `react-native-maps` modules
-  * `compileOnly` to `provided`
-  * `implementation` to `compile`
-
-```terminal
-cd ~
-nano Projects/tailpos/node_modules/react-native-maps/lib/android/build.gradle
-```
-
-
-Updating `react-native-bluetooth-serial` modules
-  * remove `@Override` in line 23 (the second `@Override`)
-
-```terminal
-cd ~
-nano Projects/tailpos/node_modules/react-native-bluetooth-serial/android/src/main/java/com/rusel/RCTBluetoothSerial/RCTBluetoothSerialPackage.java
-```
-
-Updating `react-native-device-info` with `support-v4` fix
-```
-ERROR: In <declare-styleable> FontFamilyFont, unable to find attribute android:fontVariationSettings
-ERROR: In <declare-styleable> FontFamilyFont, unable to find attribute android:ttcIndex
-```
-Set the following under `build.gradle` under `react-native-device-info`
-```terminal
-android {
-  compileSdkVersion 26
-  buildToolsVersion "26.0.2"
-  ...
-}
-
-dependencies {
-  ...
-  compile "com.google.android.gms:play-services-gcm:12.0.1"
-  compile "com.android.support:support-v4:27.1.0"
-}
-```
-
-Update `react-native-localization`
-* `implementation` to `compile`
-
-Building `TailPOS`
-
-```terminal
-cd ~
-cd Projects/tailpos
-react-native run-android
-```
+We express our profound gratitude to the Empress Community, the architects behind the essential tools that power this project. Their innovation and dedication have been instrumental in building the foundations and functionalities we rely on. We are profoundly grateful for their pioneering work and ongoing support.
